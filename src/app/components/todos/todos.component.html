@@ -1,0 +1,72 @@
+<section class="todoapp">
+
+  <header class="header">
+    <h1>{{title}}</h1>
+    <!-- Add a new Todo when this Input is submitted -->
+    <input class="new-todo" placeholder="What needs to be done?" autofocus>
+  </header>
+
+  <!-- This section should be hidden by default and shown when there are todos -->
+  <section class="main">
+
+    <!-- This input should toggle all todos -->
+    <input class="toggle-all" type="checkbox">
+    <label for="toggle-all">Mark all as complete</label>
+
+    <ul class="todo-list">
+
+      <!-- These are here just to show the structure of the list items -->
+      <!-- List items should get the class `editing` when editing and `completed` when marked as completed -->
+      <li class="completed">
+
+        <div class="view">
+          <!-- Checkbox that represents of the todo is completed or not -->
+          <input class="toggle" type="checkbox" checked>
+          <!-- The title of the todo -->
+          <label>Learn AngularJS</label>
+          <!-- Button to remove the todo -->
+          <button class="destroy"></button>
+        </div>
+
+        <!-- When this input is submitted, the title of the todo should be changed -->
+        <!-- When empty input is submitted, remove the todo -->
+        <input class="edit" value="Create a TodoMVC template">
+      </li>
+
+      <li>
+        <div class="view">
+          <input class="toggle" type="checkbox">
+          <label>Learn Angular2</label>
+          <button class="destroy"></button>
+        </div>
+        <input class="edit" value="Rule the web">
+      </li>
+    </ul>
+    
+  </section>
+
+  <!-- This footer should hidden by default and shown when there are todos -->
+  <footer class="footer">
+    <!-- This should be `0 items left` by default -->
+    <span class="todo-count"><strong>0</strong> item left</span>
+    <!-- Remove this if you don't implement routing -->
+    <ul class="filters">
+      <li>
+        <!-- Implement routing, and show corresponding todos according to the route -->
+        <!-- class `selected` should be added to the current route -->
+        <a class="selected" href="#/">All</a>
+      </li>
+      <li>
+        <a href="/active">Active</a>
+      </li>
+      <li>
+        <a href="/completed">Completed</a>
+      </li>
+    </ul>
+
+    <!-- Hidden if no completed items are left ↓ -->
+    <!-- Removes all completed todo items -->
+    <button class="clear-completed">Clear completed</button>
+  </footer>
+
+</section>
